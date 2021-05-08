@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+img {
+  cursor: pointer;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+.title{
+  font-family: 'Playfair Display', serif;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-size: 60px;
+  
+}
+
+.selected{
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 10px !important;
+}
+
+.modalTitle{
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  margin: 10px;
+  color: white;
+}
+
+.modalText{
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  color: white;
+}

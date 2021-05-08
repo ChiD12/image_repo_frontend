@@ -1,6 +1,6 @@
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 
-export const serverUrl = "http://localhost:5000";
+export const serverUrl = "178.128.231.244:5000";
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({

@@ -33,6 +33,7 @@ export const Home: FC<PageProps> = (props): JSX.Element => {
             setItems( response.data.items );
         }).catch(error =>{
             console.log(error)
+            console.log(endpoint)
         })
     };
     

@@ -1,19 +1,12 @@
-import React, { useState, useEffect, FC , useRef } from 'react';
+import React, { useState, FC , useRef } from 'react';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import axios from 'axios';
 import { serverUrl } from './../constants'
-import { Item, ItemResponse, ModalProps } from './../Interfaces'
+import { ItemResponse, ModalProps } from './../Interfaces'
 
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
 import Card from '@material-ui/core/Card';
-import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
-const  endpoint  =  `${serverUrl}/all`;
-const imageEndpoint = `${serverUrl}/images/`;
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -87,8 +80,8 @@ export const ModalForm: FC<ModalProps> = (props): JSX.Element => {
         let target = `${serverUrl}/createImage`
 
         let type = img.type
-        if(type.split('/')[0] != 'image'){
-            throw 'Is not an Image'
+        if(type.split('/')[0] !== 'image'){
+            throw new Error('Is not an Image')
         }
 
         let headers = {
@@ -165,10 +158,6 @@ export const ModalForm: FC<ModalProps> = (props): JSX.Element => {
         if (inputFile.current !== null){
             console.log(inputFile.current.files)
             const files =  e.currentTarget.files;
-            // e.currentTarget.files = {} as FileList
-            // for (let file in inputFile.current.files){
-            //     console.log(file)
-            // }
             Array.from(files).forEach(file => {
                 try{
                     sendImage(file)
@@ -199,8 +188,8 @@ export const ModalForm: FC<ModalProps> = (props): JSX.Element => {
             <input type='file' id='file' ref={inputFile} style={{display: 'none'}} onChange={onSubmit}/>
             <Button onClick={onButtonClick}
                     classes={{
-                        root: classes.root, // class name, e.g. `classes-nesting-root-x`
-                        label: classes.label, // class name, e.g. `classes-nesting-label-x`
+                        root: classes.root, 
+                        label: classes.label, 
                       }}>
                           Open file upload window
             </Button>

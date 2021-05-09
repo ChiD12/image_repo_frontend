@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 import * as Pages from './components/pages'
 import ModalForm from './components/Modal'
 import Modal from '@material-ui/core/Modal';
-import { PageProps } from './Interfaces'
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 import HomeIcon from '@material-ui/icons/Home';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import NavigationIcon from '@material-ui/icons/Navigation';
 
 interface pageType{
   value : keyof typeof Pages
@@ -121,8 +117,5 @@ function App() {
     </div>
   );
 }
-
-
-
 
 export default App;

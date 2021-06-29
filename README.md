@@ -1,4 +1,4 @@
-# Image Repo frontend for the Shopify challenge
+# Image Repo frontend
 
 [Backend Found here](https://github.com/ChiD12/image_repo)
 \
